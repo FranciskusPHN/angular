@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CardsComponent } from './cards.component';
 import { BudgetsComponent } from './budgets.component';
+import { UnitsComponent } from './units.component';
 import { CategoriesComponent } from './categories.component';
 import { ProductsComponent } from './products.component';
 import { FormsComponent } from './forms.component';
@@ -33,6 +34,13 @@ const routes: Routes = [
         component: BudgetsComponent,
         data: {
           title: 'Budget'
+        }
+      },
+      {
+        path: 'units',
+        component: UnitsComponent,
+        data: {
+          title: 'Unit'
         }
       },
       {

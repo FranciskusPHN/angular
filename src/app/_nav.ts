@@ -103,12 +103,12 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Budget',
-        url: '/master/cards',
+        url: '/master/budgets',
         // icon: 'icon-puzzle'
       },
       {
         name: 'Unit',
-        url: '/master/carousels',
+        url: '/master/units',
         // icon: 'icon-puzzle'
       },
       {
