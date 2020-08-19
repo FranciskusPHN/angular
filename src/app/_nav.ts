@@ -104,23 +104,30 @@ export const navItems: INavData[] = [
       {
         name: 'Budget',
         url: '/master/cards',
-        // icon: 'icon-puzzle'
       },
       {
         name: 'Unit',
         url: '/master/carousels',
-        // icon: 'icon-puzzle'
       },
       {
         name: 'Kategori',
         url: '/master/categories',
-        // icon: 'icon-puzzle'
       },
       {
         name: 'Barang',
         url: '/master/products',
-        // icon: 'icon-puzzle'
       }
+    ]
+  },
+  {
+    name: 'Purchasing',
+    url: '/purchasing',
+    icon: 'icon-basket',
+    children: [
+      {
+        name: 'Purchase Request',
+        url: '/purchasing/purchaserequest',
+      },
     ]
   },
   {

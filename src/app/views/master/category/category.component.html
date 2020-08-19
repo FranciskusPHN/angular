@@ -1,0 +1,12 @@
+<table>
+    <td>{{category.code}}</td>
+    <td>{{category.name}}</td>
+    <td class="text-center">
+        <button (click)="deleteCategorie(category._id)" class="btn btn-danger"><i class="fa fa-trash"></i>
+            Delete</button>
+        <button (click)="updateCategorie(category._id)" class="btn btn-primary" style="margin-left: 10px"><i
+                class="fa fa-edit"></i> Update</button>
+        <button (click)="categorieDetails(category._id)" class="btn btn-info" style="margin-left: 10px"><i
+                class="fa fa-info-circle"></i> Details</button>
+    </td>
+</table>
