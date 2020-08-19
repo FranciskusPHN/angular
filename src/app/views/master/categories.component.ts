@@ -20,14 +20,14 @@ export class CategoriesComponent implements OnInit{
   }
 
   reloadData(): void {
-    // this.employeeService.getEmployees()
-    //   .subscribe((response) => {
-    //     this.employees = response;
-    //   });
     this.categoriesService.getCategories()
       .subscribe((data: Categories[]) =>{
-        this.categories = data;
-        // console.log(this.categories)
+        this.categories = data.data;
+        console.log(this.categories)
       })
+  }
+
+  categorieDetails(id: number) {
+    this.router.navigate(['details', id]);
   }
 }

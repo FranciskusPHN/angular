@@ -7,12 +7,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-employee-detail',
   templateUrl: './employee-detail.component.html',
-  //styleUrls: ['./employee-detail.component.scss']
 })
 export class EmployeeDetailComponent implements OnInit {
 
   id: number;
-  employee: Categories;
+  categories: Categories;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,13 +19,14 @@ export class EmployeeDetailComponent implements OnInit {
     private categoryService: CategoriesService) { }
 
   ngOnInit() {
-    this.employee = new Categories();
+    this.categories = new Categories();
 
     this.id = this.route.snapshot.params.id;
 
     this.categoryService.getCategorie(this.id)
       .subscribe(data => {
-        this.employee = data;
+        this.categories = data;
+        console.log(this.categories)
       }, error => console.log(error));
   }
 

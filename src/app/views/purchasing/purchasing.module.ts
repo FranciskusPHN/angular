@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { CardsComponent } from './cards.component';
+// import { CardsComponent } from './cards.component';
 
-import { BudgetsComponent } from './budgets.component';
-import { UnitsComponent } from './units.component';
+// import { BudgetsComponent } from './budgets.component';
 
-import { CategoriesComponent } from './categories.component';
-import { ProductsComponent } from './products.component';
+// import { CategoriesComponent } from './categories.component';
+// import { ProductsComponent } from './products.component';
 
-// Forms Component
-import { FormsComponent } from './forms.component';
+// // Forms Component
+// import { FormsComponent } from './forms.component';
 
 // import { SwitchesComponent } from './switches.component';
 // import { TablesComponent } from './tables.component';
@@ -23,11 +22,11 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 
 // Carousel Component
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { CarouselsComponent } from './carousels.component';
+// import { CarouselsComponent } from './carousels.component';
 
 // Collapse Component
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { CollapsesComponent } from './collapses.component';
+// import { CollapsesComponent } from './collapses.component';
 
 // Dropdowns Component
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -52,14 +51,14 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 // import { NavbarsComponent } from './navbars/navbars.component';
 
 // Components Routing
-import { MasterRoutingModule } from './master-routing.module';
-import { CategoryComponent } from './category/category.component';
+import { PurchasingRoutingModule } from './purchasing-routing.module';
+import { PurchaseRequestComponent } from './purchaserequest.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    MasterRoutingModule,
+    PurchasingRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule,
     CarouselModule.forRoot(),
@@ -70,19 +69,17 @@ import { CategoryComponent } from './category/category.component';
     TooltipModule.forRoot()
   ],
   declarations: [
-    CardsComponent,
-    BudgetsComponent,
-    UnitsComponent,
-    CategoriesComponent,
-    ProductsComponent,
-    FormsComponent,
+    PurchaseRequestComponent
+    // CardsComponent,
+    // BudgetsComponent,
+    // CategoriesComponent,
+    // ProductsComponent,
+    // FormsComponent,
     // SwitchesComponent,
     // TablesComponent,
     // TabsComponent,
-    CarouselsComponent,
-    CollapsesComponent,
-    ProductsComponent,
-    CategoryComponent
+    // CarouselsComponent,
+    // CollapsesComponent,
     // PaginationsComponent,
     // PopoversComponent,
     // ProgressComponent,
@@ -90,4 +87,4 @@ import { CategoryComponent } from './category/category.component';
     // NavbarsComponent
   ]
 })
-export class MasterModule { }
+export class PurchasingModule { }

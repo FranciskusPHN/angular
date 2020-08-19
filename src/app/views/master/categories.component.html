@@ -16,65 +16,13 @@
             </thead>
 
             <tbody>
-              <tr *ngFor="let categorie of categories.data">
-                <td>{{categorie.code}}</td>
-                <td>{{categorie.name}}</td>
-                <!-- <td>{{employee._id}}</td> -->
-                <td class="text-center">
-                  <button (click)="deleteCategorie(categorie._id)" class="btn btn-danger"><i class="fa fa-trash"></i>
-                    Delete</button>
-                  <button (click)="updateCategorie(categorie._id)" class="btn btn-primary" style="margin-left: 10px"><i
-                      class="fa fa-edit"></i> Update</button>
-                  <button (click)="categorieDetails(categorie._id)" class="btn btn-info" style="margin-left: 10px"><i
-                      class="fa fa-info-circle"></i> Details</button>
-                </td>
+              <tr *ngFor="let category of categories">
+                <app-category [category]="category"></app-category>
               </tr>
             </tbody>
-              
-            <!-- <tbody>
-                <tr>
-                  <td>Vishnu Serghei</td>
-                  <td>2012/01/01</td>
-                  <td>Member</td>
-                  <td>
-                    <span class="badge badge-success">Active</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Zbyněk Phoibos</td>
-                  <td>2012/02/01</td>
-                  <td>Staff</td>
-                  <td>
-                    <span class="badge badge-danger">Banned</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Einar Randall</td>
-                  <td>2012/02/01</td>
-                  <td>Admin</td>
-                  <td>
-                    <span class="badge badge-secondary">Inactive</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Félix Troels</td>
-                  <td>2012/03/01</td>
-                  <td>Member</td>
-                  <td>
-                    <span class="badge badge-warning">Pending</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Aulus Agmundr</td>
-                  <td>2012/01/21</td>
-                  <td>Staff</td>
-                  <td>
-                    <span class="badge badge-success">Active</span>
-                  </td>
-                </tr>
-              </tbody> -->
+
           </table>
-          <nav>
+          <!-- <nav>
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Prev</a></li>
               <li class="page-item active">
@@ -85,7 +33,7 @@
               <li class="page-item"><a class="page-link" href="#">4</a></li>
               <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </div>
