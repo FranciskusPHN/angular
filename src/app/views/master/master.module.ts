@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { CardsComponent } from './cards.component';
+// import { CardsComponent } from './cards.component';
 
 import { BudgetsComponent } from './budgets.component';
 
@@ -22,7 +22,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 
 // Carousel Component
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { CarouselsComponent } from './carousels.component';
+// import { CarouselsComponent } from './carousels.component';
 
 // Collapse Component
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -50,9 +50,15 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 // navbars
 // import { NavbarsComponent } from './navbars/navbars.component';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 // Components Routing
 import { MasterRoutingModule } from './master-routing.module';
 import { CategoryComponent } from './category/category.component';
+import { CommonCmpComponent } from './common-cmp/common-cmp.component';
+import { DetailCmpComponent } from './detail-cmp/detail-cmp.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderCmpComponent } from './header-cmp/header-cmp.component';
 
 @NgModule({
   imports: [
@@ -66,10 +72,12 @@ import { CategoryComponent } from './category/category.component';
     PaginationModule.forRoot(),
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    NgxPaginationModule,
+    HttpClientModule
   ],
   declarations: [
-    CardsComponent,
+    // CardsComponent,
     BudgetsComponent,
     CategoriesComponent,
     ProductsComponent,
@@ -77,10 +85,13 @@ import { CategoryComponent } from './category/category.component';
     // SwitchesComponent,
     // TablesComponent,
     // TabsComponent,
-    CarouselsComponent,
+    // CarouselsComponent,
     CollapsesComponent,
     ProductsComponent,
-    CategoryComponent
+    CategoryComponent,
+    CommonCmpComponent,
+    DetailCmpComponent,
+    HeaderCmpComponent
     // PaginationsComponent,
     // PopoversComponent,
     // ProgressComponent,

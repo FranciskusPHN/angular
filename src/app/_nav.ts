@@ -103,11 +103,11 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Budget',
-        url: '/master/cards',
+        url: '/master/budgets',
       },
       {
         name: 'Unit',
-        url: '/master/carousels',
+        url: '/master/units',
       },
       {
         name: 'Kategori',
@@ -116,7 +116,7 @@ export const navItems: INavData[] = [
       {
         name: 'Barang',
         url: '/master/products',
-      }
+      },
     ]
   },
   {
