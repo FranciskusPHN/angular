@@ -21,4 +21,8 @@ export class CategoriesService {
   getCategorie(id: number): Observable<any> {
     return this.http.get(this.apiServer + `master/categories/${id}`);
   }
+
+  deleteCategorie(id: number): Observable<any> {
+    return this.http.delete(this.apiServer + `master/categories/${id}`, { responseType: 'text' });
+  }
 }

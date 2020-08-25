@@ -16,18 +16,18 @@ export class CategoriesComponent implements OnInit{
   ) { }
   
   ngOnInit() {
-    this.reloadData();
+    // this.reloadData();
   }
 
-  reloadData(): void {
-    this.categoriesService.getCategories()
-      .subscribe((data: Categories[]) =>{
-        this.categories = data.data;
-        console.log(this.categories)
-      })
-  }
+  // reloadData(): void {
+  //   this.categoriesService.getCategories()
+  //     .subscribe((data: Categories[]) =>{
+  //       this.categories = data.data;
+  //       console.log(this.categories)
+  //     })
+  // }
 
-  categorieDetails(id: number) {
-    this.router.navigate(['details', id]);
-  }
+  // categorieDetails(id: number) {
+  //   this.router.navigate(['details', id]);
+  // }
 }

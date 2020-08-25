@@ -1,5 +1,15 @@
-<table>
-    <td>{{category.code}}</td>
+<table class="table table-bordered table-striped table-sm">
+    <thead>
+      <tr>
+        <th>Kode</th>
+        <th>Nama</th>
+        <th class="text-center">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{category.code}}</td>
     <td>{{category.name}}</td>
     <td class="text-center">
         <button (click)="deleteCategorie(category._id)" class="btn btn-danger"><i class="fa fa-trash"></i>
@@ -9,4 +19,9 @@
         <button (click)="categorieDetails(category._id)" class="btn btn-info" style="margin-left: 10px"><i
                 class="fa fa-info-circle"></i> Details</button>
     </td>
-</table>
+      </tr>
+    </tbody>
+
+  </table>
+
+    

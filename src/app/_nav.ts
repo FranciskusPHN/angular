@@ -104,12 +104,10 @@ export const navItems: INavData[] = [
       {
         name: 'Budget',
         url: '/master/budgets',
-        // icon: 'icon-puzzle'
       },
       {
         name: 'Unit',
         url: '/master/units',
-        // icon: 'icon-puzzle'
       },
       {
         name: 'Kategori',
@@ -118,7 +116,7 @@ export const navItems: INavData[] = [
       {
         name: 'Barang',
         url: '/master/products',
-      }
+      },
     ]
   },
   {

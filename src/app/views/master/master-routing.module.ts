@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CardsComponent } from './cards.component';
-import { BudgetsComponent } from './budgets.component';
-import { UnitsComponent } from './units.component';
-import { CategoriesComponent } from './categories.component';
-import { ProductsComponent } from './products.component';
-import { FormsComponent } from './forms.component';
-import { CarouselsComponent } from './carousels.component';
-import { CollapsesComponent } from './collapses.component';
+// import { CardsComponent } from './cards.component';
+// import { BudgetsComponent } from './budgets.component';
+// import { CategoriesComponent } from './categories.component';
+// import { ProductsComponent } from './products.component';
+// import { FormsComponent } from './forms.component';
+// import { CarouselsComponent } from './carousels.component';
+// import { CollapsesComponent } from './collapses.component';
+import { CommonCmpComponent } from './common-cmp/common-cmp.component';
+import { DetailCmpComponent } from './detail-cmp/detail-cmp.component';
 
 const routes: Routes = [
   {
@@ -23,46 +24,33 @@ const routes: Routes = [
       },
       {
         path: 'budgets',
-        component: BudgetsComponent,
+        component: CommonCmpComponent,
         data: {
-          title: 'Budget'
+          title: 'Budgets'
         }
       },
       {
         path: 'units',
-        component: UnitsComponent,
+        component: CommonCmpComponent,
         data: {
-          title: 'Unit'
-        }
-      },
-      {
-        path: 'forms',
-        component: FormsComponent,
-        data: {
-          title: 'Forms'
-        }
-      },
-      {
-        path: 'carousels',
-        component: CarouselsComponent,
-        data: {
-          title: 'Carousels'
+          title: 'Units'
         }
       },
       {
         path: 'categories',
-        component: CategoriesComponent,
+        component: CommonCmpComponent,
         data: {
           title: 'Categories'
         }
       },
       {
         path: 'products',
-        component: ProductsComponent,
+        component: CommonCmpComponent,
         data: {
           title: 'Products'
         }
       },
+      { path: 'detail-cmp/:id', component: DetailCmpComponent },
     ]
   }
 ];
