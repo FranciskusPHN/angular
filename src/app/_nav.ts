@@ -117,6 +117,10 @@ export const navItems: INavData[] = [
         name: 'Barang',
         url: '/master/products',
       },
+      {
+        name: 'Test',
+        url: '/master/tests',
+      },
     ]
   },
   {
