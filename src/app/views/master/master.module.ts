@@ -60,6 +60,8 @@ import { CommonCmpComponent } from './common-cmp/common-cmp.component';
 import { DetailCmpComponent } from './detail-cmp/detail-cmp.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderCmpComponent } from './header-cmp/header-cmp.component';
+import { TestComponent } from './test/test.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   imports: [
@@ -93,7 +95,9 @@ import { HeaderCmpComponent } from './header-cmp/header-cmp.component';
     CategoryComponent,
     CommonCmpComponent,
     DetailCmpComponent,
-    HeaderCmpComponent
+    HeaderCmpComponent,
+    TestComponent,
+    TableComponent
     // PaginationsComponent,
     // PopoversComponent,
     // ProgressComponent,

@@ -11,6 +11,8 @@ export class HeaderCmpComponent implements OnInit {
   // @Input('header') header: any;
   @Input() GridData: any;
   @Input() ColData: any;
+  @Input()
+  public tableContent: any;
 
 
   parameterName: string;

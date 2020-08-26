@@ -7,10 +7,10 @@ import { ProductsService } from '../../../products.service';
 import { BudgetService } from '../../../budget.service';
 import { UnitService } from '../../../unit.service';
 
-import { Categories } from '../../../categories';
-import { Products } from '../../../products';
-import { Budgets } from '../../../budgets';
-import { Units } from '../../../units';
+import { Categories, categories } from '../../../categories';
+import { Products, products } from '../../../products';
+import { Budgets, budgets } from '../../../budgets';
+import { Units, units } from '../../../units';
 
 export interface ICommonEntity {
   Data1: string;
@@ -36,15 +36,16 @@ export class CommonCmpComponent implements OnInit {
   IsBudgets: boolean;
   IsUnits: boolean;
 
-  categories: Categories[];
-  products: Products[];
-  budgets: Budgets[];
-  units: Units[];
+  categories: Categories[] = categories;
+  products: Products[] = products;
+  budgets: Budgets[] = budgets;
+  units: Units[] = units;
 
+  // newcategories: categories;
   //==================
 
   totalRecords: String;
-  page:Number=1;
+  page: Number = 1;
 
   constructor(
     private router: Router,
@@ -53,7 +54,7 @@ export class CommonCmpComponent implements OnInit {
     private productsService: ProductsService,
     private budgetsService: BudgetService,
     private unitsService: UnitService,
-    
+
   ) { }
 
   gridData: any[];
@@ -77,49 +78,22 @@ export class CommonCmpComponent implements OnInit {
   }
 
   getCategoriesData() {
-    this.colData =  [
-      { field:'code', header:'Kode'},
-      { field:'name', header:'Nama'},
-      { field:'', header:'Action'},
-    ]
-    // this.tableHeader = [
-    //   { Header1: 'Kode', Header2: 'Nama', Header3: 'Action' }
-    // ]
+    this.colData = this.categories;
     this.IsCategories = true;
   }
 
   getProductData() {
-    this.colData =  [
-      { field:'Code', header:'Kode Barang'},
-      { field:'Name', header:'Nama Barang'},
-      { field:'UOM.Unit', header:'Satuan Default'},
-      { field:'Currency.Code', header:'Mata Uang'},
-      { field:'Price', header:'Harga Barang'},
-      { field:'Tags', header:'Tags'},
-      { field:'', header:'Action'},
-    ]
-    // this.tableHeader = [
-    //   { Header1: 'Kode Barang', Header2: 'Nama Barang', Header3: 'Satuan Default', Header4: 'Mata Uang', Header5: 'Harga Barang', Header6: 'Tags', Header7: 'Action' }
-    // ]
+    this.colData = this.products;
     this.IsProducts = true;
   }
 
   getBudgetData() {
-    this.colData =  [
-      { field:'code', header:'Kode'},
-      { field:'name', header:'Nama'},
-      { field:'', header:'Action'},
-    ]
+    this.colData = this.budgets;
     this.IsBudgets = true;
   }
 
   getUnitData() {
-    this.colData =  [
-      { field:'Code', header:'Kode'},
-      { field:'Division.Name', header:'Nama Divisi'},
-      { field:'Name', header:'Nama Unit'},
-      { field:'', header:'Action'},
-    ]
+    this.colData = this.units;
     this.IsUnits = true;
   }
 
@@ -128,7 +102,6 @@ export class CommonCmpComponent implements OnInit {
       this.categoriesService.getCategories()
         .subscribe((data: Categories[]) => {
           this.gridData = data.data;
-          // console.log(this.categories)
         })
     }
 
@@ -136,7 +109,6 @@ export class CommonCmpComponent implements OnInit {
       this.productsService.getProducts()
         .subscribe((data: Products[]) => {
           this.gridData = data.data;
-          // console.log(this.products)
         })
     }
 
@@ -151,13 +123,12 @@ export class CommonCmpComponent implements OnInit {
       this.unitsService.getUnits()
         .subscribe((data: Units[]) => {
           this.gridData = data.data;
-          // console.log(this.units)
         })
     }
 
   }
 
-  deleteUnit(id: number){
+  deleteUnit(id: number) {
     this.unitsService.deleteUnit(id)
       .subscribe(
         data => {
@@ -167,8 +138,8 @@ export class CommonCmpComponent implements OnInit {
         error => console.log(error));
   }
 
-  DetailsUnit(id: number){
-    
+  DetailsUnit(id: number) {
+
     this.router.navigate(['detail-cmp', id]);
   }
 

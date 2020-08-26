@@ -10,6 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 // import { CollapsesComponent } from './collapses.component';
 import { CommonCmpComponent } from './common-cmp/common-cmp.component';
 import { DetailCmpComponent } from './detail-cmp/detail-cmp.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {
@@ -50,7 +51,14 @@ const routes: Routes = [
           title: 'Products'
         }
       },
-      { path: 'detail-cmp/:id', component: DetailCmpComponent },
+      // { path: 'detail-cmp/:id', component: DetailCmpComponent },
+      {
+        path: 'tests',
+        component: TestComponent,
+        data: {
+          title: 'Test'
+        }
+      },
     ]
   }
 ];

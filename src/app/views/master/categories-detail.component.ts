@@ -19,7 +19,7 @@ export class EmployeeDetailComponent implements OnInit {
     private categoryService: CategoriesService) { }
 
   ngOnInit() {
-    this.categories = new Categories();
+    // this.categories = new Categories();
 
     this.id = this.route.snapshot.params.id;
 
